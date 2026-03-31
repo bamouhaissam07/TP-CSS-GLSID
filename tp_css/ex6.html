@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 6 - Variables</title>
+    <style>
+        /* On définit les variables par défaut (Thème Clair) */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+        }
 
+        /* On définit les variables pour le Thème Sombre */
+        .dark-mode {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            /* Transition pour que le changement soit doux */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .back-link {
+            display: block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 14px;
+        }
+
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="../index.html" class="back-link">← Retour</a>
+
+    <h1>Variables CSS</h1>
+
+    <button onclick="toggleTheme()">Toggle Theme</button>
+
+    <script>
+        function toggleTheme() {
+            // Cette ligne ajoute ou enlève la classe 'dark-mode' au corps de la page
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+
+</body>
+</html>
