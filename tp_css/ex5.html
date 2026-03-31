@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 5 - Responsive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .back-link {
+            display: block;
+            text-align: left;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #000;
+        }
+        h1 { margin-bottom: 30px; }
 
+        /* --- MENU BLEU --- */
+        .nav-menu {
+            display: flex;
+            background-color: lightblue;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .nav-menu span {
+            flex: 1;
+            text-align: center;
+        }
+
+        /* --- CONTENEUR PRINCIPAL --- */
+        .main-wrapper {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* --- BLOC VERT (Contenu) --- */
+        .content {
+            background-color: lightgreen;
+            flex: 3; /* Prend plus de place */
+            padding: 40px 20px;
+            text-align: left;
+            min-height: 150px;
+        }
+
+        /* --- BLOC ORANGE (Sidebar) --- */
+        .sidebar {
+            background-color: orange;
+            flex: 1;
+            padding: 40px 20px;
+            display: none; /* CACHÉ PAR DÉFAUT (Mobile) */
+        }
+
+        /* --- RESPONSIVE (Desktop) --- */
+        @media (min-width: 768px) {
+            .sidebar {
+                display: block; /* AFFICHÉ SUR PC */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="../index.html" class="back-link">← Retour</a>
+
+    <h1>Exercice 5 - Responsive</h1>
+
+    <nav class="nav-menu">
+        <span>Accueil</span>
+        <span>Services</span>
+        <span>Contact</span>
+    </nav>
+
+    <div class="main-wrapper">
+        <main class="content">
+            <p>Contenu principal</p>
+            <p>Resize the screen 👇</p>
+        </main>
+        
+        <aside class="sidebar">
+            Sidebar (visible only on desktop)
+        </aside>
+    </div>
+
+</body>
+</html>
