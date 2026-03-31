@@ -1,0 +1,43 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f7fa; /* Gris très clair pour faire ressortir le blanc */
+    margin: 0;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+}
+
+.container {
+    display: grid;
+    /* Crée une grille de 3 colonnes qui s'adapte à l'écran */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.exercice-btn {
+    display: block;
+    background-color: #ffffff;
+    color: #333;
+    text-decoration: none;
+    padding: 30px 20px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    /* Ombre douce identique à ton image */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.exercice-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    background-color: #fff;
+}
+
