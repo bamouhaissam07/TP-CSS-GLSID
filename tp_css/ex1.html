@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 1 - Réponses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            line-height: 1.8;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .back-link {
+            display: block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+        }
+        /* Pour l'effet de surbrillance grise comme sur ton image */
+        .highlight {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
 
+    <a href="../index.html" class="back-link">← Retour</a>
+
+    <h1>Exercice 1 - Réponses</h1>
+
+    <h2>1. Sélecteurs :</h2>
+    <ul>
+        <li>Tous les liens &rarr; <strong>.main-nav a</strong></li>
+        <li class="highlight">Lien actif &rarr; <strong>.main-nav a.active</strong></li>
+        <li>Article featured &rarr; <strong>.post.featured</strong></li>
+        <li class="highlight">Premier paragraphe &rarr; <strong>article p:first-of-type</strong></li>
+        <li>li pairs &rarr; <strong>li:nth-child(even)</strong></li>
+    </ul>
+
+    <h2>2. Spécificité :</h2>
+    <p>Ordre croissant :</p>
+    <p><strong>p &rarr; .text &rarr; p.text &rarr; #main &rarr; #main .text p</strong></p>
+    
+    <p>Si même spécificité &rarr; <strong>la dernière règle gagne</strong></p>
+    
+    <p>Éviter !important &rarr; <strong>rend le code difficile à maintenir</strong></p>
+
+</body>
+</html>
