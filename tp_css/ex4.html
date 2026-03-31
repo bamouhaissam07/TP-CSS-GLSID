@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 4 - CSS Grid</title>
+    <style>
+        /* Style minimaliste pour ressembler à l'image */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            color: #000;
+        }
 
+        /* Lien de retour discret */
+        .back-link {
+            display: block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* --- 4.1 LA GRILLE (En haut) --- */
+        .grid-container {
+            display: grid;
+            /* Crée 3 colonnes de largeur égale */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px; /* Espace entre les blocs */
+            margin-bottom: 50px;
+        }
+
+        .grid-item {
+            background-color: lightblue;
+            padding: 50px 20px; /* Hauteur des blocs */
+            font-size: 20px;
+        }
+
+        /* --- 4.2 LE LAYOUT (En bas) --- */
+        .layout-container {
+            display: grid;
+            /* Définition des zones */
+            grid-template-areas: 
+                "header header header"
+                "sidebar main main"
+                "footer footer footer";
+            grid-template-columns: 200px 1fr 1fr; /* Sidebar de 200px, le reste partage */
+            gap: 10px; /* Espace entre les zones */
+            color: #000; /* Texte noir */
+            font-size: 18px;
+        }
+
+        .layout-item {
+            padding: 20px;
+        }
+
+        /* Affectation des couleurs exactes de l'image */
+        .header { grid-area: header; background-color: red; }
+        .sidebar { grid-area: sidebar; background-color: yellow; }
+        .main { grid-area: main; background-color: green; }
+        .footer { grid-area: footer; background-color: gray; }
+
+    </style>
+</head>
+<body>
+
+    <a href="../index.html" class="back-link">← Retour au menu</a>
+
+    <h1>Exercice 4 - CSS Grid</h1>
+
+    <h2>Grid</h2>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+    </div>
+
+    <h2>Layout</h2>
+    <div class="layout-container">
+        <header class="layout-item header">Header</header>
+        <nav class="layout-item sidebar">Sidebar</nav>
+        <main class="layout-item main">Main</main>
+        <footer class="layout-item footer">Footer</footer>
+    </div>
+
+</body>
+</html>
